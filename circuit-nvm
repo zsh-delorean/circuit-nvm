@@ -1,0 +1,12 @@
+#
+# DeLorean nvm circuit.
+#
+
+zstyle -s ':delorean:circuit:nvm' nvm-dir 'nvm_dir'
+[[ -n "${nvm_dir}" ]] && export NVM_DIR="${nvm_dir}"
+
+function circuit-nvm {
+  source "$(brew --prefix nvm)/nvm.sh"
+}
+
+return 0
